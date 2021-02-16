@@ -21,6 +21,7 @@ AUTO_REMOVE = False
 TABLE_SCHEMA = [
                     {"type": "DATE", "name": "date"},
                     {"type": "STRING", "name": "query"},
+                    {"type": "STRING", "name": "type"},
                     {"type": "STRING", "name": "page"},
                     {"type": "STRING", "name": "device"},
                     {"type": "INTEGER", "name": "clicks"},
@@ -42,7 +43,7 @@ ALLOW_OPEN_CRON = True
 HIDE_HOMEPAGE = False
 
 # Set Timezone ('US/Eastern', 'US/Central', 'US/Pacific')
-GSC_TIMEZONE = 'US/Eastern'
+GSC_TIMEZONE = 'US/Central'
 
 # Base query for GSC.  startDate and endDate are replaced upon call.
 GSC_QUERY = {
@@ -50,6 +51,7 @@ GSC_QUERY = {
                  "endDate": "2017-07-31",
                  "dimensions": [
                   "query",
+                  "type",
                   "date",
                   "page",
                   "device"
